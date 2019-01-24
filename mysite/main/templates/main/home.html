@@ -1,0 +1,16 @@
+<head>
+	{% load static %}
+	<link href="{% static 'tinymce/css/prism.css' %}" rel="stylesheet">
+</head>
+<body>
+	<h1> Saroj Bhattarai </h1>
+	{% for t in tutorials %}
+		<p>{{t.tutorial_title}}</p>
+		<p>{{t.tutorial_published}}</p>
+		<p>{{t.tutorial_content|safe}}</p>
+		<br>
+		<br>
+		<br>
+{% endfor %}
+</body>
+<script type="text/javascript" src="{% static 'tinymce/js/prism.js' %}"></script>
